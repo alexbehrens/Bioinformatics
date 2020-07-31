@@ -7,6 +7,8 @@ randDNAStr = ''.join([random.choice(Nucleotides)
 #random DNA string
 
 
+#hi dad
+
 
 DNAStr = validateSeq(randDNAStr)
 

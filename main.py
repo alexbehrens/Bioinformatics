@@ -1,7 +1,7 @@
 from DNAToolkit import *
 from utilities import colored
 import random
-
+#hi other computer
 randDNAStr = ''.join([random.choice(Nucleotides)
                     for nuc in range(500)])
 #random DNA string

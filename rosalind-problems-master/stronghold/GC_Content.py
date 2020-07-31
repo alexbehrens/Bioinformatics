@@ -10,16 +10,14 @@ def gc_content(seq):
         ((seq.count('C') + seq.count('G')) / len(seq) * 100), 6)
 
 
-# Calculate GC Content from FASTA formatted text file:
-
 # === Read data from the file (FASTA formatted file)
 # Storing File contents in a list
-FASTAFile = readFile("test_data/gc_content.txt")
+FASTAFile = readFile("test_data/rosalind_gc.txt")
 # Dictionary for Labels + Data
 FASTADict = {}
 # String for holding the current label
 FASTALabel = ""
-
+print(FASTAFile)
 # === Clean/Prepare the data (Format for ease of you with our gc_content function)
 # Converting FASTA/List file data into a dictionary
 for line in FASTAFile:
@@ -28,12 +26,13 @@ for line in FASTAFile:
         FASTADict[FASTALabel] = ""
     else:
         FASTADict[FASTALabel] += line
+print(FASTADict)
 
 # === Format the data (Store the data in a convenient way)
 # === Run needed operation on the data (pass the data to our gc_content function)
 # Using Dictionary Comprehension to generate a new dictionary with GC content value
 RESULTDict = {key: gc_content(value) for (key, value) in FASTADict.items()}
-
+print(RESULTDict)
 # Looking for max value in values() of our new dictionary
 MaxGCKey = max(RESULTDict, key=RESULTDict.get)
 

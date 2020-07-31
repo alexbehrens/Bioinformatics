@@ -3,7 +3,7 @@ from utilities import colored
 import random
 
 randDNAStr = ''.join([random.choice(Nucleotides)
-                    for nuc in range(50)])
+                    for nuc in range(500)])
 #random DNA string
 
 
